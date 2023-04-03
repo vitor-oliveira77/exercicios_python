@@ -1,0 +1,22 @@
+# listas de compras 
+lista = []  
+
+while True:  
+    opcao = input(" Selecione uma opção: [i]nserir [a]pagar [l]istar:  ") 
+    if opcao == "i": 
+        valor = input("Digite um valor: ")
+        lista.append(valor)
+        continue
+    elif opcao == "l" : 
+        print(lista) 
+    elif opcao == "a":  
+        indice = int(input("Digite o indice que deseja apagar: "))  
+        
+        try:
+            del lista[valor] 
+        except: 
+            print('Não foi possivel apagar este indice')
+        continue 
+    else: 
+        print("Dígito invalido, tente novamente !")
+        continue

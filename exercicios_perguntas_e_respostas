@@ -1,0 +1,57 @@
+questions = [ 
+  {
+    'question': 'Quanto é 2+2?',
+    'options': ['1','3','4','5'], 
+    'answer': '4',
+  }, 
+  {
+    'question': 'Quanto é 5*5?', 
+    'options': ['20','25','40','50'], 
+    'answer': '25', 
+  }, 
+  {
+    'question': 'Quanto é 5*5?', 
+    'options': ['20','25','40','50'], 
+    'answer': '25', 
+  },
+] 
+amount_hit = 0
+for question in questions: 
+  print('pergunta:', question['question'])
+  print() 
+
+  qtd_options = question['options']
+  for i, options in enumerate(question['options']):
+    print(f'{i})', options) 
+  print() 
+
+  choice = input('Escolha uma opção') 
+  
+  hit = False 
+  choice_int = None 
+  amount_options = len(qtd_options)
+  print(amount_hit)
+
+  if choice.isdigit(): 
+    choice_int = int(choice)
+
+
+  if choice_int is not None: 
+    
+    if choice_int >= 0 and choice_int < amount_options: 
+      if qtd_options[choice_int] == question['answer']: 
+        hit = True 
+
+        print()
+        if hit:
+          amount_hit += 1
+          print('Acertou') 
+        else: 
+          print('Errou') 
+  
+  print() 
+
+print('Você acertou', amount_hit) 
+print('de', len(questions), 'perguntas.')
+
+

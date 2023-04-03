@@ -1,0 +1,18 @@
+
+def mult(*args): 
+    total = 1 
+    for numero in args: 
+        total *= numero 
+    return total
+
+multiplication = mult(1,2,3,4,5)
+print(multiplication)
+
+def par_impar(x): 
+    if x % 2 == 0:
+       return f'{x} é par' 
+    return f'{x} é impar' 
+
+
+
+print(par_impar(5))
